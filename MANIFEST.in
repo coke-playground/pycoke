@@ -1,0 +1,16 @@
+graft pybind11/include
+graft pybind11/tools
+include pybind11/CMakeLists.txt pybind11/LICENSE
+
+graft workflow/src
+include workflow/LICENSE workflow/LICENSE_GPLV2
+include workflow/CMakeLists.txt workflow/CMakeLists_Headers.txt
+include workflow/workflow-config.cmake.in
+
+graft coke/cmake
+graft coke/include
+graft coke/src
+include coke/CMakeLists.txt coke/LICENSE.txt
+
+graft src
+include CMakeLists.txt LICENSE.txt pyproject.toml Readme.md
