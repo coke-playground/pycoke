@@ -11,8 +11,8 @@
 #include "pycoke.h"
 #include "coke/fileio.h"
 #include "coke/go.h"
-#include "coke/http_client.h"
-#include "coke/http_utils.h"
+#include "coke/http/http_client.h"
+#include "coke/http/http_utils.h"
 #include "coke/sleep.h"
 
 class TaskException : public std::exception {

@@ -137,9 +137,9 @@ coke::Task<> PyAwaiter<T>::start(coke::Task<T> task, py::object fut) {
 
     try {
         if constexpr (std::is_void_v<T>)
-            co_await task;
+            co_await std::move(task);
         else
-            val.set_value(co_await task);
+            val.set_value(co_await std::move(task));
     }
     catch (...) {
         eptr = std::current_exception();
